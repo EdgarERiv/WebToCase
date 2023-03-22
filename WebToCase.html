@@ -1,0 +1,32 @@
+<html>
+
+    <script src="https://latamcrm--mxatedig.sandbox.my.site.com/webToCase/lightning/lightning.out.js"></script>
+
+    <div data-lightning-out="true"></div>
+
+    <script>
+        const appName = 'c:MX_ATD_WebToCaseLightningOut';
+        const componentName = 'c:mxAtdWebToCase';
+        const lightningEndpoint = 'https://latamcrm--mxatedig.sandbox.my.site.com';
+        const targetElement = document.querySelector("[data-lightning-out]");
+        const componentAttributes = {
+
+        };
+
+        $Lightning.use(
+            appName,
+            function(){
+                $Lightning.createComponent(
+                    componentName,
+                    componentAttributes,
+                    targetElement,
+                    function(cmp){
+                        console.log('lwc created');
+                    }
+                );
+            },
+            lightningEndpoint
+        );
+    </script>
+
+</html>
